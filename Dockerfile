@@ -9,6 +9,7 @@ ENV S6_STAGE2_HOOK=/app/init.sh
 RUN apt-get update && apt-get install -y \
     libssl3 \
     libssl-dev \
+    git \
     unzip
 COPY root/ /
 COPY /src /app
