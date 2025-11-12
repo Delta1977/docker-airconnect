@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     libssl3 \
     libssl-dev \
     git \
+    make \
     unzip
 COPY root/ /
 COPY /src /app
