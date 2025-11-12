@@ -2,5 +2,15 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended"
+  ],
+
+  "packageRules": [
+    {
+      "matchDatasources": ["github-releases"],
+      "matchDepNames": ["philippe44/AirConnect"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
   ]
+}  
 }
