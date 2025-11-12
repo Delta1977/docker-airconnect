@@ -21,8 +21,7 @@ RUN if [ "$ARCH_VAR" = "amd64" ]; then ARCH_VAR=linux-x86_64; elif [ "$ARCH_VAR"
     && git clone http://github.com/philippe44/airconnect \
     && cd ~/airconnect \
     && git submodule update --init \
-    && cd ~/airconnect/airupnp \
-    && make \
+    && .\buildall.sh \
     && mv /tmp/airupnp-$ARCH_VAR /usr/bin/airupnp-docker \
     && mv /tmp/aircast-$ARCH_VAR /usr/bin/aircast-docker \
     && chmod +x /usr/bin/airupnp-docker \
