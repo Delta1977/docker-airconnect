@@ -1,11 +1,34 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended", ":dependencyDashboard"
-  ],
+  "extends": ["config:recommended", ":dependencyDashboard"]
  "automerge": false,
   "description": "Schedule daily before 4 AM",
   "schedule": [
     "* 0-3 * * *"
-  ],  
+  ], 
+"packageRules": [
+    {
+      "matchCategories": [
+        "docker"
+      ],
+      "enabled": true
+    },
+    {
+      "description": "Update Docker base images and ARGs",
+      "matchDatasources": [
+        "docker",
+        "dockerfile",
+        "docker-version",
+        "github-tags"
+      ],
+      "matchPackageNames": [
+        "alpine",
+        "lsiobase/ubuntu"
+      ],
+      "matchFileNames": [
+        "Dockerfile"
+      ],
+      "automerge": false
+    }
+  ]  
 }  
