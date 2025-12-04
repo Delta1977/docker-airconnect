@@ -23,7 +23,8 @@
       ],
       "matchPackageNames": [
         "alpine",
-        "lsiobase/ubuntu"
+        "lsiobase/ubuntu",
+        "philippe44/AirConnect"
       ],
       "matchFileNames": [
         "Dockerfile"
