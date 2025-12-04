@@ -1,12 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":dependencyDashboard"]
- "automerge": false,
+  "extends": ["config:recommended", ":dependencyDashboard"],
+  "automerge": false,
   "description": "Schedule daily before 4 AM",
   "schedule": [
     "* 0-3 * * *"
-  ], 
-"packageRules": [
+  ],
+  "packageRules": [
     {
       "matchCategories": [
         "docker"
@@ -30,5 +30,5 @@
       ],
       "automerge": false
     }
-  ]  
-}  
+  ]
+}
